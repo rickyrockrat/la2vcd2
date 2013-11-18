@@ -1,7 +1,9 @@
 la2vcd2: convert logic analyzer waveforms to a VCD file
-README
-Copyright 2005 Eric Smith <eric@brouhaha.com>
+Original code is Copyright 2005 Eric Smith <eric@brouhaha.com>
 $Id: README,v 1.1 2010-01-13 18:18:06 dfs Exp $
+
+Library creation, bug fixes, and analog data addition 
+Copyright 2010-2013 Rickyrockrat <gpib at rickyrockrat dot net>
 
 la2vcd2 is a utility to translate waveforms captured with HP logic
 analyzers (e.g., HP 16500B) to a VCD file for use with a waveform viewer
