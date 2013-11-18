@@ -1,0 +1,17 @@
+The bug fixes are as follows:
+
+1) Signal splitting doesn't allow all signals, i.e. 3-5 only gets 3-4:
+Line 535:
+<signal->source_mask |= (((1ULL << i) - 1ULL) & ~ ((1ULL << j) - 1ULL));
+>signal->source_mask |= (((1ULL << (i+1)) - 1ULL) & ~ ((1ULL << j) - 1ULL));
+
+2) An error occurs if bits are > 32 ("fatal error: field bit positions out of range").
+Line 761:
+<if (new_signals->source_mask & ~ ((1 << new_input_file->bit_count) - 1)) 
+>if (new_signals->source_mask & ~ ((1ULL << new_input_file->bit_count) - 1))
+
+3) Changed the API so a signal type can be specified (i.e. wire, real, etc).
+
+These changes were made by gpib a t rickyrockrat do t n e t.
+
+Cheers!

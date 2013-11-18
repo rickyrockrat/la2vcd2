@@ -1,0 +1,88 @@
+la2vcd2: convert logic analyzer waveforms to a VCD file
+README
+Copyright 2005 Eric Smith <eric@brouhaha.com>
+$Id: README,v 1.1 2010-01-13 18:18:06 dfs Exp $
+
+la2vcd2 is a utility to translate waveforms captured with HP logic
+analyzers (e.g., HP 16500B) to a VCD file for use with a waveform viewer
+application such as GTKWave.
+
+Usage:
+
+  ./la2vcd2 [options] signalfile...
+
+Options:
+  -ta <timefile>     times from file (mutually exclusive with -td)
+  -td <time>         set delta time
+  -r <radix>         set radix of next input file
+  -b <count>         set bit count of next input file
+  -s                 split next input file into individual bits
+  -sf <bits> <name>  split a field from the next input file
+  -ts <time>         set timescale of VCD file (default 1 ns)
+  -mn <modulename>   set module name of signals in VCD file
+  -o <vcdfile>       write VCD output to file (default stdout)
+
+Argument syntax:
+  <radix> ::= 2 | 8 | 16
+  <time> ::= <integer><unit>
+  <unit> ::= s|ms|us|ns|ps|fs
+  <bits> ::= <bitr>|<bitr>,<bits>
+  <bitr> ::= <integer>|<integer>-<integer>
+
+Input file format:
+
+  HP logic analzyers can provide the captured data in either binary or
+  text format.  Depending on the logic analyzer, the data can be transferred
+  to a computer via Ethernet, serial, IEEE-488, or floppy disc.
+
+  The binary data format seems to be undocumented and analyzer-
+  dependent, so this program only accepts the text format.
+
+  In text format, there is one file for each signal, and optionally a
+  file "time_abs.txt" for timestamps and a file "line_num.txt" for
+  sample numbers.  There is also a file "1st_line.txt" which we will
+  ignore.
+
+  Each file contains a title on its first line, and one data item on
+  each successive line.  For the signals, the data items are the actual
+  sample values.  For the timestamps, the date items are floating point
+  numbers representing time in seconds.
+
+Example:
+
+  la2vcd2 -ta time_abs.txt -r 16 -b 9 -sf 8-5 f1 -sf 4-0 f2 input.txt -o out.vcd
+
+  time_abs.txt is the timestamp file.
+
+  input.txt stores 9 bit wide hexadecimal samples.  It will be divided into
+  a four-bit and a five-bit vector, f1 and f2, in out.vcd.
+
+If you run:
+
+sudo make install
+
+It will also install the la2vcd2 library and header file la2vcd2.h.
+
+VCD file format:
+
+  VCD (Value Change Dump) file format:
+  http://www.mathworks.com/access/helpdesk/help/toolbox/modelsim/a1064428140.html
+
+GTKWave viewer:
+
+  http://www.cs.manchester.ac.uk/apt/projects/tools/gtkwave/
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License version 2 as
+published by the Free Software Foundation.  Note that permission is
+not granted to redistribute this program under the terms of any other
+version of the General Public License.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 USA

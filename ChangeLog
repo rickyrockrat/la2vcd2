@@ -1,0 +1,11 @@
+2010-01-16 Rickyrockrat: Moved core into library. Started moving error
+handling from fatal, which exits instead of passing the error back up the
+calling tree.
+2010-01-19 RickyRockRat: Finished with the error handling. Release 
+Version 0.02L4. Fixed version issue.
+2010-01-20 RickyRockRat: Removed some annoying debug prints.
+Version 0.02L5
+2010-01-24 RickyRockRat: Fixed tool name string not printing to file.
+Version 0.02L6
+2013-11-17 RickyRockRat: Added autoconf files/tools
+Version 0.4
