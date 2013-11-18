@@ -1,8 +1,8 @@
 la2vcd2: convert logic analyzer waveforms to a VCD file
-Original code is Copyright 2005 Eric Smith <eric@brouhaha.com>
+Original code (la2vcd) is Copyright 2005 Eric Smith <eric@brouhaha.com>
 $Id: README,v 1.1 2010-01-13 18:18:06 dfs Exp $
 
-Library creation, bug fixes, and analog data addition 
+la2vcd2 fork: Library creation, bug fixes, and analog data addition 
 Copyright 2010-2013 Rickyrockrat <gpib at rickyrockrat dot net>
 
 la2vcd2 is a utility to translate waveforms captured with HP logic
@@ -68,11 +68,11 @@ It will also install the la2vcd2 library and header file la2vcd2.h.
 VCD file format:
 
   VCD (Value Change Dump) file format:
-  http://www.mathworks.com/access/helpdesk/help/toolbox/modelsim/a1064428140.html
+  http://www.beyondttl.com/vcd.php
 
 GTKWave viewer:
 
-  http://www.cs.manchester.ac.uk/apt/projects/tools/gtkwave/
+  http://gtkwave.sourceforge.net
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License version 2 as
