@@ -22,7 +22,7 @@ pkgconfig_DATA=libla2vcd2.pc
 
 ACLOCAL_AMFLAGS = -I m4
 
-EXTRA_DIST = autogen.sh po/Makefile.in.in
+EXTRA_DIST = autogen.sh po/Makefile.in.in po/POTFILES.in
 dist_doc_DATA = README
 DISTCLEANFILES = po/Makefile po/Makefile.in po/stamp-it po/POTFILES
 
