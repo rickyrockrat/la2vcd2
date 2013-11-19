@@ -8,6 +8,6 @@ Name: la2vcd2
 Description: Convert raw data to VCD
 Version: @PACKAGE_VERSION@
 Requires: 
-Libs: -L${libdir} -lla2vcd2
-Cflags: -I${includedir}/la2vcd2
+Libs: -lla2vcd2
+Cflags: 
 
