@@ -1,10 +1,10 @@
 /** \file ******************************************************************
-\n\b File:        la2vcd2.h
+\n\b File:        libla2vcd2.h
 \n\b Author:      Initial: Eric Smith <eric@brouhaha.com>
 									Library conversion: Doug Springer
 \n\b Company:     DNK Designs Inc.
 \n\b Date:        01/16/2010  3:43 pm
-\n\b Description: Header file for the la2vcd library
+\n\b Description: Header file for the la2vcd2 library
 */ /************************************************************************
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License version 2 as

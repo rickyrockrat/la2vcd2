@@ -7,10 +7,10 @@
 AUTOMAKE_OPTIONS =  dist-bzip2 
 
 bin_PROGRAMS = la2vcd2
-la2vcd2_SOURCES = la2vcd.c
+la2vcd2_SOURCES = la2vcd2.c
 la2vcd2_LDADD = libla2vcd2.la
 
-include_HEADERS = la2vcd2.h
+include_HEADERS = libla2vcd2.h
 lib_LTLIBRARIES = libla2vcd2.la
 libla2vcd2_la_SOURCES =  la2vcd_lib.c
 libla2vcd2_la_LDFLAGS=-version-info 0:0:0

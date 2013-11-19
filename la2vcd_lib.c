@@ -26,7 +26,7 @@ Change Log: \n
 
 */
 
-#include "la2vcd2.h"
+#include "libla2vcd2.h"
 
 #define MAX_VCD_SYM_LEN 3
 /**from vcd2lxt.c, gtkwave  */

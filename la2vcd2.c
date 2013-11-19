@@ -38,7 +38,7 @@
  */
 
 
-#include "la2vcd2.h"
+#include "libla2vcd2.h"
 #ifdef HAVE_CONFIG_H
 #include <config.h>
 #endif
