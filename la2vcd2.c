@@ -238,8 +238,8 @@ int main (int argc, char *argv [])
 				  if (! new_signals)
 				    {
 							new_signals=_vcd_add_signal (&first_signal,&last_signal,new_input_file, 
-								new_input_file->name, V_WIRE, new_input_file->bit_count,new_input_file->bit_count);
-						fprintf(stderr,"Bug Alert!! This code may not work!!");
+								new_input_file->name, V_WIRE, 0,new_input_file->bit_count); //was  new_input_file->bit_count,new_input_file->bit_count
+						//fprintf(stderr,"Bug Alert!! This code may not work!!");
 				    }
 			
 				  while (new_signals)

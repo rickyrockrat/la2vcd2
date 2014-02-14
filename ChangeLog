@@ -9,3 +9,5 @@ Version 0.02L5
 Version 0.02L6
 2013-11-17 RickyRockRat: Added autoconf files/tools
 Version 0.4
+2014-02-13 RickyRockRat: Fixed autoconf files, added patch from David Gesswein, 
+'decoding without splitting' Ticket 1. Changed time_scale to timescale in vcd.

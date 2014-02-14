@@ -4,7 +4,7 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: la2vcd2
+Name: libla2vcd2
 Description: Convert raw data to VCD
 Version: @PACKAGE_VERSION@
 Requires: 

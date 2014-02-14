@@ -196,7 +196,7 @@ int write_vcd_header (struct la2vcd *l)
   fprintf (l->outf, "$version\n");
   fprintf (l->outf, "    TOOL: %s\n",TOSTRING(VERSION));
   fprintf (l->outf, "$end\n");
-  fprintf (l->outf, "$time_scale\n");
+  fprintf (l->outf, "$timescale\n");
   fprintf (l->outf, "   %d ns\n",(int)(l->time_scale/(double)(1e-9)));
   fprintf (l->outf, "$end\n");
   fprintf (l->outf, "$scope module %s $end\n", l->module_name);

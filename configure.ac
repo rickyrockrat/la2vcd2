@@ -2,13 +2,13 @@
 #
 # -------------------------------------------------------------------------------
 AC_PREREQ([2.5])
-AC_INIT([la2vcd2], [0.4], [gpib@rickyrockrat.net])
+AC_INIT([la2vcd2], [0.5], [gpib@rickyrockrat.net])
 #AM_INIT_AUTOMAKE([-Wall -Werror foreign], [AC_PACKAGE_TARNAME()], [AC_PACKAGE_VERSION()])
 AM_INIT_AUTOMAKE([AC_PACKAGE_NAME()], [AC_PACKAGE_TARNAME()], [AC_PACKAGE_VERSION()])
 
 AC_CONFIG_MACRO_DIR([m4])
 
-AC_CONFIG_SRCDIR([la2vcd.c])
+AC_CONFIG_SRCDIR([la2vcd2.c])
 AM_CONFIG_HEADER([config.h])
 AC_PROG_INTLTOOL([0.23])
 # Check for header files
