@@ -238,7 +238,7 @@ int main (int argc, char *argv [])
 				  if (! new_signals)
 				    {
 							new_signals=_vcd_add_signal (&first_signal,&last_signal,new_input_file, 
-								new_input_file->name, V_WIRE, 0,new_input_file->bit_count); //was  new_input_file->bit_count,new_input_file->bit_count
+								new_input_file->name, V_WIRE, 0,new_input_file->bit_count-1); //was  new_input_file->bit_count,new_input_file->bit_count
 						//fprintf(stderr,"Bug Alert!! This code may not work!!");
 				    }
 			
@@ -247,7 +247,7 @@ int main (int argc, char *argv [])
 				      new_signals->input_file = new_input_file;
 						printf("Sig %s\n",new_signals->name);
 				      if (new_signals->source_mask & ~ ((1ULL << new_input_file->bit_count) - 1))
-								fatal (3, "field bit positions out of range %lx %d\n",new_signals->source_mask,new_input_file->bit_count);
+								fatal (3, "field bit positions out of range %"PRIx64" %d\n",new_signals->source_mask,new_input_file->bit_count);
 				      if (new_signals->source_mask & new_input_file->allocated_mask)
 								fprintf (stderr, "warning: bits of input file allocated to multiple signals\n");
 				      new_input_file->allocated_mask |= new_signals->source_mask;

@@ -11,3 +11,4 @@ Version 0.02L6
 Version 0.4
 2014-02-13 RickyRockRat: Fixed autoconf files, added patch from David Gesswein, 
 'decoding without splitting' Ticket 1. Changed time_scale to timescale in vcd.
+Added inttypes to accomodate portable print of uint64_t via PRIx64.

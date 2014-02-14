@@ -38,6 +38,7 @@ Change Log: \n
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <inttypes.h>
 
 enum VarTypes { V_EVENT, V_PARAMETER,
                 V_INTEGER, V_REAL, V_REAL_PARAMETER=V_REAL, V_REALTIME=V_REAL, V_REG, V_SUPPLY0,
