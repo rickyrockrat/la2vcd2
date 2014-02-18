@@ -1,4 +1,32 @@
 #!/bin/bash
+# \file ******************************************************************
+#\n\b File:        release.sh
+#\n\b Author:      Doug Springer
+#\n\b Company:     DNK Designs Inc.
+#\n\b Date:        02/17/2013 
+#\n\b Description: File to tag, prep, tar, and copy to sourceforge
+#*/ /************************************************************************
+# This file is part of OpenGPIB.
+# For details, see http://la2vcd2.sourceforge.net/projects
+#
+# Copyright (C) 2008-2014 Doug Springer <gpib@rickyrockrat.net>
+#
+#    OpenGPIB is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License version 3 
+#    as published by the Free Software Foundation. Note that permission 
+#    is not granted to redistribute this program under the terms of any
+#    other version of the General Public License.
+#
+#    OpenGPIB is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with OpenGPIB.  If not, see <http://www.gnu.org/licenses/>.
+#    
+#		The License should be in the file called COPYING.
+#
 PURL="https://svn.code.sf.net"
 PROJ=la2vcd2
 
@@ -154,8 +182,10 @@ copy_files_to_sourceforge () {
  echo "When you get to command line, type exit"
  ssh -t $user,$PROJ@shell.sourceforge.net create
  echo "Creating directory $NDIR"
- ssh $user@shell.sourceforge.net mkdir $NDIR
+ ssh $user@shell.sourceforge.net mkdir -p $NDIR
  cp $CDIR/README $CODIR/README.txt
+ echo "" >> $CODIR/README.txt
+ echo "" >> $CODIR/README.txt
  cat $CDIR/ChangeLog >> $CODIR/README.txt
  tlist="$CODIR/README.txt  $TARF"
  echo "Copy files $tlist"
