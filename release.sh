@@ -6,7 +6,7 @@
 #\n\b Date:        02/17/2013 
 #\n\b Description: File to tag, prep, tar, and copy to sourceforge
 #*/ /************************************************************************
-# This file is part of OpenGPIB.
+# This file is part of la2vcd2.
 # For details, see http://la2vcd2.sourceforge.net/projects
 #
 # Copyright (C) 2008-2014 Doug Springer <gpib@rickyrockrat.net>
